@@ -1,0 +1,49 @@
+{
+  "name": "fake-git-history",
+  "version": "1.7.0",
+  "description": "A command-line tool to generate your GitHub activity graph.",
+  "bin": "src/cli.js",
+  "main": "src/cli.js",
+  "files": [
+    "src/cli.js",
+    "src/index.js"
+  ],
+  "repository": "git@github.com:artiebits/fake-git-history.git",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node src/cli.js",
+    "lint": "prettier --write 'src/**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*src/**/*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "4.1.0",
+    "date-fns": "1.30.1",
+    "meow": "5.0.0",
+    "ora": "5.1.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "commit-history",
+    "git-activity",
+    "contributions-calendar",
+    "contribution-graph",
+    "contributions"
+  ]
+}
